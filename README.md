@@ -10,4 +10,4 @@ Igiagbin is a simple "pastebin" type webapp, that allows anyone to share long te
 
 ## Requirements
 - Cloudflare Turnstile
-- RavenDB Database ( as of now it needs to be unauthentica
+- RavenDB Database ( as of now it needs to be unauthenticated, it will be fixed in a future update )
