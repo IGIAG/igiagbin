@@ -1,0 +1,25 @@
+﻿@model PasteModel
+<div class="box p-5 m-5" style="max-width: 700px;">
+    <h1 class="title">Fill out this quick form</h1>
+    <div class="content">
+        <form asp-controller="Paste" asp-action="Create" method="post">
+            <div class="field">
+                <label class="label">Paste content</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Textarea" name="contents" asp-for="Contents"></textarea>
+                </div>
+            </div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAj74aC6ELRVB4ZH" data-callback="enableLink"></div>
+            <div class="control">
+                <button disabled id="ShareBtn" class="button is-link">Share with the world!</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<script>
+    function enableLink(x){
+        console.log("enabled button!");
+        document.getElementById("ShareBtn").disabled = false;
+    }
+</script>

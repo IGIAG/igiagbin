@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+	<title>@ViewData["Title"] - igiagbin</title>
+</head>
+<body class="is-flex is-flex-direction-column" style="min-height: 100vh;">
+	<header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" asp-area="" asp-controller="Home" asp-action="Index">
+                    <h3 class="title">igiagbin</h3>
+
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+        </nav>
+	</header>
+    <div class="is-flex-grow-1 is-flex is-flex-direction-column is-justify-content-center">
+		<main>
+			@RenderBody()
+		</main>
+	</div>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong> &copy; 2024 - igiagbin</strong> by igiag.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

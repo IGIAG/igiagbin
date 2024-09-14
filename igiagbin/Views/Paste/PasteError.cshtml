@@ -1,0 +1,14 @@
+﻿@model PasteErrorModel
+
+<h1></h1>
+<h2></h2>
+
+<section class="hero is-danger is-fullheight">
+    <div class="hero-body">
+        <div class="">
+            <p class="title">Error!</p>
+            <p class="subtitle">@Model.ErrorMessage</p>
+            <a class="button" href="@Model.ReturnHref">Back</a>
+        </div> 
+    </div>
+</section>

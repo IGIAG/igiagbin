@@ -1,0 +1,40 @@
+﻿@model PasteModel
+@{
+
+}
+
+<div class="box p-5 m-5" style="max-width: 700px;">
+	<h1 class="title">Public paste:</h1>
+	<div class="content">
+		<div class="field">
+			<label class="label">Upload date</label>
+			<div class="control mb-2">
+				<code placeholder="Textarea" id="PasteContents">@Model.UploadedOn</code>
+			</div>
+			<label class="label">Paste content</label>
+			<div class="control">
+				<code class="textarea" placeholder="Textarea" id="PasteContents">@Model.Contents</code>
+			</div>
+		</div>
+		<div class="control">
+			<button class="button is-primary" onclick="onClickContents()">Copy contents!</button>
+			<button class="button is-link" onclick="onClickLink()">Copy link!</button>
+		</div>
+	</div>
+</div>
+<script>
+
+	function onClickContents() {
+		var copyText = document.getElementById("PasteContents").innerHTML;
+		copyToClipboard(copyText);
+	}
+	function onClickLink() {
+		var copyText = window.location.href;
+		copyToClipboard(copyText);
+	}
+
+	function copyToClipboard(text) {
+		navigator.clipboard.writeText(text);
+	}
+
+</script>
