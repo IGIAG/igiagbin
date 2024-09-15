@@ -19,6 +19,10 @@ namespace igiagbin.Controllers
 			id = WebUtility.UrlDecode(id);
             using var session = DocumentStoreHolder.Store.OpenSession();
 			ViewData.Model = session.Load<PasteModel>(id);
+			if (ViewData.Model == null)
+			{
+				return ReturnError("Paste not found! Did you copy the right link?", "/Paste", 404);
+			}
 			return View();
 		}
 
