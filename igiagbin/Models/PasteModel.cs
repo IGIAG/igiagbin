@@ -11,9 +11,9 @@ namespace igiagbin.Models
         [BindNever]
         public DateTime UploadedOn { get; set; } = DateTime.Now;
 
-        [BindRequired]
-		[StringLength(10000,ErrorMessage = "Paste must be between 1 and 10000 characters", MinimumLength = 1)]
-		public string? Contents { get; set; }
+		[BindRequired]
+		[StringLength(10000, ErrorMessage = "Paste must be between 1 and 10000 characters", MinimumLength = 1)]
+		public string Contents { get; set; } = "No contents";
 
 
 	}
